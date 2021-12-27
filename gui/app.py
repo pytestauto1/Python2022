@@ -6,6 +6,11 @@ import os
 root = tk.Tk()
 apps = [] 
 
+if os.path.isfile('save.txt'):
+    with open('save.txt', 'r') as f:
+        tempApps = f.read()
+        print(tempApps)
+
 def addApp():
 
     for widget in frame.winfo_children():
