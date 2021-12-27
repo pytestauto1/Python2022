@@ -4,9 +4,18 @@ import os
 
 
 root = tk.Tk()
+apps = [] 
 
 def addApp():
+
+    for widget in frame.winfo_children():
+        widget.destroy()
     filename = filedialog.askopenfilename(initialdir="/", title = "Select a file", filetypes=(("Executable", "*.exe"),("All files","*.*")))
+    apps.append(filename)
+    print(filename)
+    for app in apps:
+        label = tk.Label(frame, text = app, bg ="gray")
+        label.pack()
 
 canvas = tk.Canvas(root, height=600, width=600, bg="#263D42")
 canvas.pack()
