@@ -4,4 +4,7 @@ import os
 
 
 root = tk.Tk()
+
+canvas = tk.Canvas(root, height=600, width=600, bg="#263D42")
+canvas.pack()
 root.mainloop()
