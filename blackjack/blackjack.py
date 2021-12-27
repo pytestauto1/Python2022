@@ -39,8 +39,8 @@ def revealDealerHand():
 
 #game loop
 for _ in range(2):
-    dealCard(playerHand)
     dealCard(dealerHand)
+    dealCard(playerHand)
     
     
 
