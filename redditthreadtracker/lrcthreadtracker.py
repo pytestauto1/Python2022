@@ -11,7 +11,6 @@ limit = '1'
 timeframe = 'day'
 listing = 'new'
 
-
 #api query look for new thread in subreddit
 def newLrcThread(subreddit,listing,limit,timeframe):
     try:
@@ -22,9 +21,9 @@ def newLrcThread(subreddit,listing,limit,timeframe):
         print('error')
     return request.json()
 
+#call above method and store into object r 
 r = newLrcThread(subreddit,listing,limit,timeframe)
 #print(r)  
-
 
 
 def newLrcThreadTitle(r):
@@ -35,28 +34,19 @@ def newLrcThreadTitle(r):
         
     return posts
 
+#reads r extracts title , stores , console logs 
 posts = newLrcThreadTitle(r)
 print(posts) # returns. 
 
 
-    # response = requests.get(url)
-    # print(response)
 
-    ##some logic adding api response to frame
-    # thread = response
-    # thread.append()
-
-    # for thread in thread:
-    #     label = tk.Label(frame, text = app, bg ="gray")
-    #     label.pack()
-
-
-
+#Canvas, GUI setup:
 canvas = tk.Tk()
 canvas.geometry("400x500")
 canvas.title("Reddit-Loopring-LRC")
 
 # a layer to return values
+
 
 #newLrcThread(subreddit,listing,limit,timeframe)
 
