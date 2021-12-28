@@ -23,16 +23,20 @@ def newLrcThread(subreddit,listing,limit,timeframe):
     return request.json()
 
 r = newLrcThread(subreddit,listing,limit,timeframe)
-print(r)  
+#print(r)  
 
-""" def newLrcThreadTitle(r):
+
+
+def newLrcThreadTitle(r):
     posts = []
     for post in r['data']['children']:
         x = post['data']['title']
         posts.append(x)
+        
+    return posts
 
 posts = newLrcThreadTitle(r)
-print(posts) """
+print(posts) # returns. 
 
 
     # response = requests.get(url)
@@ -54,7 +58,7 @@ canvas.title("Reddit-Loopring-LRC")
 
 # a layer to return values
 
-newLrcThread(subreddit,listing,limit,timeframe)
+#newLrcThread(subreddit,listing,limit,timeframe)
 
 
 
