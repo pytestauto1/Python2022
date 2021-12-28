@@ -37,10 +37,6 @@ def newLrcThreadTitle(r):
 posts = newLrcThreadTitle(r)
 print(posts) # returns. 
 
-#show titles'posts' on our canvas
-""" for post in posts:
-    label = tk.Label(frame, text = app, bg ="gray")
-    label.pack() """
 
 #Canvas, GUI setup:
 canvas = tk.Tk()
@@ -51,6 +47,10 @@ canvas.title("Reddit-Loopring-LRC")
 frame = tk.Frame(canvas,bg="grey")
 frame.place(relheight=0.8,relwidth=0.8,relx=0.1,rely=0.1)
 
+#show titles'posts' on our canvas
+for post in posts:
+    label = tk.Label(frame, text = posts, bg ="gray")
+    label.pack()
 
 #newLrcThread(subreddit,listing,limit,timeframe)
 
