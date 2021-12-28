@@ -7,7 +7,7 @@ thread = []
 
 #reddit api logic
 subreddit = 'loopringorg'
-limit = '1'
+limit = '10'
 timeframe = 'day'
 listing = 'new'
 
@@ -31,21 +31,25 @@ def newLrcThreadTitle(r):
     for post in r['data']['children']:
         x = post['data']['title']
         posts.append(x)
-        
     return posts
 
 #reads r extracts title , stores , console logs 
 posts = newLrcThreadTitle(r)
 print(posts) # returns. 
 
-
+#show titles'posts' on our canvas
+""" for post in posts:
+    label = tk.Label(frame, text = app, bg ="gray")
+    label.pack() """
 
 #Canvas, GUI setup:
 canvas = tk.Tk()
 canvas.geometry("400x500")
 canvas.title("Reddit-Loopring-LRC")
 
-# a layer to return values
+#add a Frame
+frame = tk.Frame(canvas,bg="grey")
+frame.place(relheight=0.8,relwidth=0.8,relx=0.1,rely=0.1)
 
 
 #newLrcThread(subreddit,listing,limit,timeframe)
